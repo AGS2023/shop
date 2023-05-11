@@ -1,0 +1,336 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>The Nature Mushroom</title>
+    <link rel="icon" href="/images/logo.ico">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+
+    <!-- Fontawesome 5.14.0 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+
+    <!--For Plugins external css-->
+    <link rel="stylesheet" href="assets/css/animate/animate.css" />
+    <link rel="stylesheet" href="assets/css/plugins.css" />
+
+    <!--Theme custom css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!--Theme Responsive css-->
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+
+    <!-- For gallery -->
+    <link rel="stylesheet" href="assets/css/styleGal.css"> 
+
+    <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <style>
+        #headerName {
+            font-size: 4.5rem;
+        }
+
+        @media screen and (max-width: 600px) {
+            #headerName {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <div class='preloader'>
+        <div class='loaded'>&nbsp;</div>
+    </div>
+
+    <!-- Start of Header Section -->
+    <%- include("partials/header") %>
+    <!-- End Header Section -->
+
+    <section id="slider" class="slider">
+        <div class="slider_overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="main_slider text-center">
+                        <div class="col-md-12">
+                            <div class="main_slider_content wow zoomIn" data-wow-duration="1s">
+                                <h1 id="headerName">The Nature<br> Mushroom</h1>
+                                <p class="wow zoomIn">
+                                <h4>We grow mushrooms by hands so we can say 100% for quality.</h4>
+                                </We>
+                                </p>
+                                <br />    
+                                <a href="/shop"><button class="btn-lg">Shop Now</button></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="portfolio_content text-center  wow fadeIn" data-wow-duration="5s">
+                    <div class="col-md-12">
+                        <div class="head_title text-center">
+                            <h4>Our Range</h4>
+                            <h4>Of Mushrooms</h4>
+                        </div>
+                        <div class="main_portfolio_content">
+
+                            <% products.forEach((product,index) => { %>
+                                <div class="col-md-3 col-sm-4 col-xs-10 single_portfolio_text">
+                                    <img src="<%= product.image_url %>" alt="" class="thumbnail" style="margin: 2rem; width: 300px;
+                                    height: 260px;
+                                    object-fit: cover;" />
+                                    <div class="portfolio_images_overlay text-center" style="margin-left: 1rem; margin-top:0.3rem; ">
+                                        <h6>
+                                            <%= product.item_name %>
+                                        </h6>
+                                        <p class="product_price">&#8377;
+                                            <%= product.price%>
+                                        </p>
+                                        <a href="/shop" class="btn btn-primary">Buy Now</a>
+                                    </div>
+                                </div>
+                                <% })%>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ourPakeg" class="ourPakeg">
+        <div class="container">
+            <div class="main_pakeg_content">
+                <div class="row">
+                    <div class="head_title text-center">
+                        <h4>Growth</h4>
+                        <h4>Procedure</h4>
+                    </div>
+
+                    <div class="single_pakeg_one text-right wow rotateInDownRight">
+                        <div class="col-md-6 col-md-offset-6 col-sm-8 col-sm-offset-4">
+                            <div class="single_pakeg_text">
+                                <div class="pakeg_title">
+                                    <h4>Initial</h4>
+                                </div>
+                                <br>
+                                <ul>
+                                    <li>
+                                        <h4>Step 1 - Composting</h4>
+                                    </li>
+                                    <li>
+                                        <h4>Step 2 - Pasturization</h4>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="single_pakeg_two text-left wow rotateInDownLeft">
+                        <div class="col-md-6 col-sm-8">
+                            <div class="single_pakeg_text">
+                                <div class="pakeg_title">
+                                    <h4>Spwan and Growth</h4>
+                                </div>
+                                <br>
+
+                                <ul>
+                                    <li>
+                                        <h4>Step 3 - Spawning</h4>
+                                    </li>
+                                    <li>
+                                        <h4>Step 4 - Casing</h4>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="single_pakeg_three text-left wow rotateInDownRight">
+                        <div class="col-md-6 col-md-offset-6 col-sm-8 col-sm-offset-4">
+                            <div class="single_pakeg_text">
+                                <div class="pakeg_title">
+                                    <h4>Snipping and Packing</h4>
+                                </div>
+                                <br>
+
+                                <ul>
+                                    <li>
+                                        <h4>Step 5 - Pinning</h4>
+                                    </li>
+                                    <li>
+                                        <h4>Step 6 - Cropping</h4>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- gallery section -->
+    <div class="gallery__bg">
+    <div style="font-family: 'Pacifico', cursive; 
+                color: white;
+                font-size:40px; text-align: center; 
+                margin-top: 30px; margin-bottom: 30px;"
+            >
+                Gallery</div>
+
+    <div class="gal__container">
+            
+        <div class="box a">
+          <img
+            src="https://images.unsplash.com/photo-1430933964450-0aefb85717c8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+            alt="#"
+            class="imgg"
+         
+          />
+        </div>
+
+        <div class="box b">
+          <img
+            src="https://images.unsplash.com/photo-1590961707570-1894b3bd78dc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60"
+            alt="#"
+            class="imgg"
+            >
+        </div>
+
+        <div class="box c">
+          <img
+            src="https://images.unsplash.com/photo-1414502027127-d1f661f502e9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60"
+            alt="#"
+            class="imgg"
+            
+          >
+        </div>
+
+        <div class="box d">
+          <img
+            src="https://images.unsplash.com/photo-1541779313128-a20c419ba9e9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60"
+            alt="#"
+            class="imgg"
+            
+          >
+        </div>
+        <div class="box e">
+          <img
+            src="https://images.unsplash.com/photo-1531710210963-09f3a4033261?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60"
+            alt="#"
+            class="imgg"
+            
+          >
+        </div>
+        <div class="box f">
+          <img
+            src="https://images.unsplash.com/photo-1541295918476-0882ae37137b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60"
+            alt="#"
+            class="imgg"
+            
+          >
+        </div>
+        <div class="box g">
+          <img
+            src="https://images.unsplash.com/photo-1507582854695-f5c0290ca215?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60"
+            alt="#"
+            class="imgg"
+            
+          >
+        </div>
+        <div class="box h">
+          <img
+            src="https://images.unsplash.com/photo-1471435403905-7a32e748e6b9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60"
+            alt="#"
+            class="imgg"
+            
+          >
+        </div>
+        <div class="box i">
+          <img
+            src="https://images.unsplash.com/photo-1538944205413-28d16ed08a9e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1031&q=80"
+            alt="#"
+            class="imgg"
+            
+          >
+        </div>
+        
+        </div>
+    </div>
+    </div>
+
+    <section id="mobaileapps" class="mobailapps">
+        <div class="slider_overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="main_mobail_apps_content wow zoomIn">
+                        <div class="col-md-5 col-sm-12 text-center">
+                            <img src="assets/images/iphone.png" alt="" />
+                        </div>
+                        <div class="col-md-7 col-sm-12">
+                            <div class="single_monail_apps_text">
+                                <h4>Happy to Announce </h4>
+                                <h1>Mobile App <span>is Available on Google Play Store.</span></h1>
+
+                                <a href=""><img src="assets/images/google.png" alt="" /></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Footer-Widget-->
+    <%- include("partials/footer_widget") %>
+
+
+
+    <!--Footer-->
+    <%- include('footer'); %>
+
+    <div class="scrollup">
+        <a href="#"><i class="fa fa-chevron-up"></i></a>
+    </div>
+
+
+    <script src="assets/js/vendor/jquery-1.11.2.min.js"></script>
+    <script src="assets/js/vendor/bootstrap.min.js"></script>
+
+    <script src="assets/js/jquery-easing/jquery.easing.1.3.js"></script>
+    <script src="assets/js/wow/wow.min.js"></script>
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/fontawesome.min.js"></script>
+
+    <script type="text/javascript" src="assets/js/contactFormHandler.js"></script>
+</body>
+
+</html>
